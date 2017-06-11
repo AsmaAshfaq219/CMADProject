@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>checkout</title>
+    <link href="css/stylenavbar.css" type="text/css" rel="stylesheet" />
+    <link href="css/stylefooter.css" type="text/css" rel="stylesheet" />
+     <link href="css/checkout.css" type="text/css" rel="stylesheet" />
+     <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Tahoma, Helvetica, Arial, sans-serif;
+            margin: 0;
+            color: #a6a6a8;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #fa961a;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div>
+        <table id="navbar">
+            <tr>
+                <td>
+                    <h3 class="logo">Furniture</h3>
+                </td>
+                <td>
+                    <div class="nav">
+                        <ul id="hoverable">
+                            <li><a href="../index.html">home</a></li>
+                            <li><a href="products.html">bedding</a></li>
+                            <li><a href="products.html">dinning </a></li>
+                            <li><a href="products.html">outdoor</a></li>
+                            <li><a href="products.html">kitchen</a></li>
+                            <li><a href="products.html">home care</a></li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <form><input id="search" type="search" name="search" placeholder="search item" />
+                    </form>
+                </td>
+                <td><a href="cart.html"><i class="fa fa-th-list" aria-hidden="true"></i> Shopping List</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="checkOutBody">
+        <h2>Check Out</h2>
+        <p>Fill in the fields to complete your purchase!</p>
+        <hr/>
+        <form>
+        <div class="nameAddress">
+            <h4>1) Name & Address</h4>
+            <div class="innerFields">
+                <filedset>
+                    <p class="required">*Required Fields</p>
+                    <table class="fieldTable">
+                        <tr>
+                            <td>
+                                <label>First Name *</br><input type="text" required="required" name="firstName"/></label></td>
+                            <td>
+                                <label>Last Name *</br><input type="text" required="required" name="lastName"/><label></td>
+                             </td>
+                        </tr>
+         <tr>
+              <td colspan=2 class="longField">
+        <label >Email Address *</br><input type="text" required="required" name="emailAdd"/></label></td>
+                        </tr>
+                        <tr>
+                            <td colspan=2 class="longField">
+                                <label>Address *</br><input type="text" required="required" name="Address"/></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>State / Province </br><input type="text" name="state"/></label></td>
+                            <td>
+                                <label>City *</br><input type="text" required="required" name="city"/><label></td>
+                             </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Mobile Number *</br><input type="text" required="required" name="cellNo"/></label></td>
+                            <td>
+                                <label>Telephone Number</br><input type="text"  name="teleNo"/><label></td>
+                             </td>
+                        </tr>
+                        <tr>
+                            <td colspan=2 class="longField">
+                                <label>Country *</br><select name="country" id="country">
+                                    <option value="Pakistan" selected="selected">Pakistan</option>
+                                    <option value="Turkey">Turkey</option>
+                                    <option value="England">England</option>
+                                    <option value="USA">USA</option>
+                                    <option value="UAE">UAE</option>
+                                    </select>
+                                </label></td>
+                        </tr>
+                        <tr>
+                            <td >
+                                Date of Birth</br>
+                           <table class="birthDateTable">
+                               <tr>
+                           <td><label><input id="month" type="text" name="birthDate"/></br>MM</label></td>
+                           <td><label><input id="date" type="text"  name="birthDate"/></br>DD</label></td>
+                           <td><label><input id="year" type="text"  name="birthDate"/></br>YYY</label></td>
+                           </tr>
+                           </table></td>
+                           <td>
+                               <label>Gender </br><select id="gender" required="required" name="gender">
+                                   <option>select</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    </select>
+                                </label> 
+                           </td>
+                        </tr>
+                    </table>
+                    <div class="checkboxMar">
+                    <input type="checkbox" name="shipAddress" value="yes"/>Ship to this Address
+                    </div></filedset>
+            </div>
+        </div>
+        <div class="parentField">
+            <div class="paymentMethod">
+            <h4>2) Payment Method</h4>
+            <div class="innerFields">
+               
+                <table class="fieldTable">
+                    <tr>
+                        <td class="forBorder"><input type="radio" name="rad" value="creditCard"/><div id="para">Credit Card (Visa, MasterCard, Amex, Discover, JCB, Diners Clud, Debit Card)</div></td>
+                    </tr>
+                     <tr>
+                        <td><input type="radio" name="rad" value="COD"/>Cash on Delivery</td>
+                    </tr>
+                    </table>
+               
+            </div>
+            </div>
+            <div class="shipMethod">
+                <h4>3) Shipping Method</h4>
+                 <div class="innerFields">
+                <table class="fieldTable">
+                    <tr><td id="shipProc"><input type="radio" name="shipProc"/></td></tr>
+                   
+                </table>
+                 </div>
+            </div>
+            <div class="commentBox">
+                <h4>Comment</h4>
+                        <textarea name="comment" class="commentBox"></textarea>
+            </div>
+        </div>
+        <div class="orderDetail">
+             <h4>4) Review your Order</h4>
+                 <div class="innerFields">
+                <table class="fieldTable2" id="checkoutBill">
+                    <thead>
+                    <tr>
+                        <th></th>
+                    <th>Product Name</th>
+                    <th>Qty</th>
+                    <th>Sub Total</th>
+                    </tr>
+                    </thead>
+                    <tbody id="products">
+                    </tbody>
+                    <tfoot id="billTotal">
+                   </tfoot>
+                </table>
+                 </div>
+                 <input type="submit" value="Place Order" class="placeOrder"/>
+        </div>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="subFooterAbout">
+            <h3>About Company</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo<br/> Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit. Aenean commod</p>
+        </div>
+        <div class="subFooterQuick">
+            <h3>Quick Nav</h3>
+            <ul>
+                <li><a href="../index.html#home">home</a> </li>
+                <li><a href="../index.html#aboutus">about us</a> </li>
+                <li><a href="../index.html#ourwork">our work</a> </li>
+                <li id="product"><a href="products.html">furniture</a> </li>
+                <li><a href="../index.html#service">services</a> </li>
+                <li><a href=".//index.html#contactus">contact us</a> </li>
+            </ul>
+        </div>
+        <div class="subFooterProd">
+            <h3>Products</h3>
+            <ul>
+                <li><a href="products.html">bedding</a></li>
+                <li><a href="products.html">dinning </a></li>
+                <li><a href="products.html">outdoor</a></li>
+                <li><a href="products.html">kitchen</a></li>
+                <li><a href="products.html">home care</a></li>
+            </ul>
+        </div>
+        <div class="navlogo">
+            <h1>FURNITURE</h1>
+        </div>
+    </div>
+</body>
+<script src="js/Cart.js"></script>
+<script src="js/Checkout.js"></script>
+</html>

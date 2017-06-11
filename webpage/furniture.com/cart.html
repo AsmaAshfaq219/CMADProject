@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ShoppingList</title>
+    <link href="css/stylefooter.css" type="text/css" rel="stylesheet" />
+    <link href="css/stylenavbar.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Tahoma, Helvetica, Arial, sans-serif;
+            margin: 0px;
+            color: #a6a6a8;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fa961a;
+        }
+
+        .cartBody {
+            display: inline-block;
+            padding-top: 100px;
+            width: 610px;
+            margin-left: 50px;
+            color: #34373c;
+            font-size: 14px;
+        }
+
+        .cartBody h3 {
+            color: #707070;
+            font-weight: 600;
+        }
+
+        .tableBag {
+            width: 610px;
+            min-width: 300px;
+            border: solid 1px #a6a6a8;
+            empty-cells: show;
+        }
+
+        .tableBag td {
+            vertical-align: top;
+        }
+
+        .tableBag img {
+            width: 88px;
+            height: 103px;
+            margin: 0px;
+        }
+
+        .prodImage {
+            padding: 5px 5px 5px 5px;
+            width: 110px;
+        }
+
+        .prodName,
+        .prodPrice,
+        .add,
+        .prodPriceQ,
+        .delete {
+            padding-top: 15px;
+        }
+
+        .quantity {
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+        .prodName {
+            width: 135px;
+        }
+        .delete button,
+        .add button{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .add{
+            display: flex;
+            justify-content: center;
+        }
+        .delete i,.add i{
+            color: #5a5854;
+            padding-top: 2px;
+            padding-right:2px;
+        }
+        .delete i{
+            padding-top: 4px;
+        }
+        #continue,
+        #clearCart{
+            font-size: 15px;
+            padding: 5px 8px 5px 8px;
+            background-color: #fa961a;
+            color: #F8F8FF;
+            border: none;
+            margin-top: 18px;
+        }
+
+        #clearCart,
+        #continue :hover {
+            cursor: pointer;
+        }
+
+        #continue a {
+            color: #F8F8FF;
+        }
+
+        #clearCart {
+            margin-left: 5px;
+        }
+        .hide{
+            display: none;
+        }
+        .show{
+            display: inline-block;
+        }
+        .totalAmount {
+            display: inline-block;
+            width: 500px;
+            padding-top: 130px;
+            vertical-align: top;
+            margin-left: 50px;
+            color: #5a5854;
+        }
+
+        .billTable {
+            width: 98%;
+            margin: 0px auto 0px auto;
+            font-size: 15px;
+        }
+
+        .billTable td:last-child {
+            text-align: right;
+        }
+
+        .totalAmount h2 {
+            font-weight: normal;
+            text-align: center;
+            font-size: 19px;
+        }
+
+        .lastRow {
+            padding-top: 10px;
+        }
+
+        #checkOut {
+            font-size: 16px;
+            padding: 6px 9px 6px 9px;
+            background-color: #fa961a;
+            border: none;
+            /*margin-top:18px;*/
+            margin: 22px auto 0px 200px;
+        }
+
+        #checkOut a {
+            color: #F8F8FF;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table id="navbar">
+            <tr>
+                <td>
+                    <h3 class="logo">Furniture</h3>
+                </td>
+                <td>
+                    <div class="nav">
+                        <ul id="hoverable">
+                            <li><a href="../index.html">home</a></li>
+                            <li><a href="products.html">bedding</a></li>
+                            <li><a href="products.html">dinning </a></li>
+                            <li><a href="products.html">outdoor</a></li>
+                            <li><a href="products.html">kitchen</a></li>
+                            <li><a href="products.html">home care</a></li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <form><input id="search" type="search" name="search" placeholder="search item" />
+                    </form>
+                </td>
+                <td><a href="cart.html"><i class="fa fa-th-list" aria-hidden="true"></i> Shopping List</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="cartBody" id="cartBody">
+        <h3>Shopping List</h3>
+        <div class="shoppingTable">
+            <table class="tableBag" id="cartTable">
+            </table>
+            <button id="continue"><a href="products.html">Continue Shopping</a></button>
+            <button id="clearCart" onClick="clearCart();">Clear List</button>
+        </div>
+    </div>
+    <div class="totalAmount">
+        <h2>Your Shopping Bill</h2>
+        <hr/>
+        <table class="billTable" id="billTable">
+        </table>
+        <button id="checkOut"><a href="checkout.html">Checkout</a></button>
+    </div>
+    <div class="footer">
+        <div class="subFooterAbout">
+            <h3>About Company</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo<br/> Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit. Aenean commod</p>
+        </div>
+        <div class="subFooterQuick">
+            <h3>Quick Nav</h3>
+            <ul>
+                <li><a href="../index.html#home">home</a> </li>
+                <li><a href="../index.html#aboutus">about us</a> </li>
+                <li><a href="../index.html#ourwork">our work</a> </li>
+                <li id="product"><a href="products.html">furniture</a> </li>
+                <li><a href="../index.html#service">services</a> </li>
+                <li><a href="../index.html#contactus">contact us</a> </li>
+            </ul>
+        </div>
+
+        <div class="subFooterProd">
+            <h3>Products</h3>
+            <ul>
+                <li><a href="products.html">bedding</a></li>
+                <li><a href="products.html">dinning </a></li>
+                <li><a href="products.html">outdoor</a></li>
+                <li><a href="products.html">kitchen</a></li>
+                <li><a href="products.html">home care</a></li>
+            </ul>
+        </div>
+        <div class="navlogo">
+            <h1>FURNITURE</h1>
+        </div>
+    </div>
+</body>
+<script src="js/Cart.js"></script>
+<script src="js/AddToCart.js"></script>
+<script src="js/Items.js"></script>
+<script>fillTable();</script>
+</html>

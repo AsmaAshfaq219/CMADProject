@@ -1,0 +1,333 @@
+body {
+            background-color: #34373c;
+            font-family: Tahoma, Helvetica, Arial, sans-serif;
+            margin: 0;
+        }
+        ul.navbar {
+            list-style-type: none;
+            text-align: right;
+            margin-right: 4em;
+            margin-top: 2.5em;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar li {
+            display: inline-block;
+        }
+        
+        .navbar li a {
+            text-decoration: none;
+            color: #F8F8FF;
+            text-transform: capitalize;
+            text-align: center;
+            padding: 19px 19px;
+        }
+        
+        .navbar li a:hover {
+            background-color: #fa961a;
+            color: black;
+        }
+        
+        .focus {
+             color: black;
+            background-color: #fa961a;
+           
+        }
+        #hoverable {
+    background-color:#2c2e34;
+    display:none;
+    list-style-type: none;
+    width:140px;
+    height:105px;
+    text-align: left;
+    text-transform: capitalize;
+    overflow: hidden;
+}
+#hoverable a{
+    padding-left:19px;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin:0px;
+    font-size:18px;
+    color:#fa961a;
+    padding-right:100px;
+}
+#hoverable a:hover{
+   background-color:#fa961a;
+   color:#2c2e34;
+}
+#product:hover #hoverable{
+    display: inline-block;
+    position: absolute;
+    top:30px;
+    left:0px;
+    cursor: pointer;
+}
+#product{
+position: relative;
+    
+}
+        .title {
+            color: #F8F8FF;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #a6a6a8;
+            text-indent: 20px;
+        }
+        
+       .nav table {
+            width: 100%;
+        }
+        
+        .section1 {
+            margin-top: 300px;
+        }
+        
+        .logo1 {
+            overflow: hidden;
+        }
+        
+        .logo {
+            background-image: url('../images/im8.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            width: 100%;
+            height: 700px;
+            text-align: center;
+            color: #a6a6a8;
+            font-size: 1.25em;
+        }
+        
+        .nav {
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+        
+        #aboutus {
+            color: #fa961a;
+            text-align: center;
+            width: 100%;
+            height: 550px;
+            margin: 50px auto 50px auto;
+            overflow: hidden;
+            padding-top: 100px;
+            
+        }
+        .aboutusDiv{
+            width:100%;
+            /*border: solid;*/
+            display:flex;
+            justify-content:center;
+            overflow:hidden;
+        }
+        #aboutus>h1 {
+            text-transform: capitalize;
+            color: inherit;
+            font-weight: normal;
+        }
+        .ab i{
+            color:#fa961a;
+            margin-top: 40px;
+        }     
+        #aboutus .aboutmid {
+            color: #fa961a;
+            background-color: #2c2e34;
+            text-align: center;
+            width:85%;
+            height:270px;
+            transform: skew(-30deg);
+            text-decoration-style: none;
+            /*border-radius: 100%;*/
+            display:flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            border: 2px double #fa961a;
+        }
+        .aboutmid p{
+            transform: skew(30deg);
+            height:170px;
+            margin: 30px;
+            width: 500px;
+            background-color: #fa961a;
+            color: #2c2e34;
+            padding-top: 30px;
+        }
+        i{
+            color: #2c2e34;
+            margin-top:10px;
+        }
+        #aboutus .ab{
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius:100%;
+            border: 2px solid #fa961a;
+            margin:30px 10px;
+            transform: skew(30deg);
+            background-color: #34373c;
+        }
+        
+        hr {
+            margin-top: 50px;
+            width: 70px;
+            margin-bottom: 50px;
+        }
+        
+        #ourwork {
+            background-color: #2c2e34;
+            color: #fa961a;
+            text-align: center;
+            width: 100%px;
+            height: 100%;
+            margin: 50px auto 50px auto;
+            padding-top: 100px;
+            padding-bottom: 112px;
+        }
+        
+        #ourwork>h1 {
+            text-transform: capitalize;
+            color: inherit;
+            font-weight: normal;
+        }
+        
+        #ourwork table td {
+            border: solid;
+            overflow: hidden;
+            width: 250px;
+            height: 250px;
+            margin:2px;
+        }
+        
+        #ourwork table {
+            width: 1000px;
+            height: 750px;
+            margin: 50px auto 50px auto;
+            background-color: #34373c;
+        }
+        
+        #ourwork table a:hover {
+            opacity: 0.5;
+        }
+        
+        #ourwork a {
+            color: #fa961a;
+        }
+        
+        #service {
+            background-image: url('../images/im16c.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            width: 100%;
+            height: 350px;
+            text-align: center;
+            color: #a6a6a8;
+            font-size: 1.25em;
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+        
+        #service .serhead, .serpara {
+             color: #F8F8FF;
+            font-weight: normal;
+        }
+        
+        #contactus {
+            background-image: url('../images/im18.jpg');
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover;
+            width: 100%;
+            height:585px;
+            text-align: center;
+            color: #a6a6a8;
+            font-size: 1.25em;
+            padding-top: 100px;
+            padding-bottom: 20px;
+            overflow:hidden;
+        }
+        
+        #contactus h2 {
+            font-weight: normal;
+            color: #fa961a;
+        }
+        
+        #contactus a {
+            color: #a6a6a8;
+        }
+        
+        #contactus table {
+            font-size: 14px;
+            text-align:center;
+            width: 90%;
+            margin: 0px auto 0px auto;
+        }
+        #contactus table th{
+         color: #fa961a;
+         font-weight:normal;
+         font-size: 16px;
+        }
+        
+        #contactus .image {
+            margin-top: 10px;
+        }
+        
+        #contactus img {
+            width: 30%;
+            height: 30%;
+            /*transition: all 0.8s linear 0s;
+    transition-property: all;
+    transition-duration: 0.8s;
+    transition-timing-function: linear;
+    transition-delay: 0s;*/
+           
+        }
+        #contactus iframe{
+          margin: 0px auto 0px auto;
+          margin-top:0px;
+        }
+        .frame{
+            display:inline-block;
+        }
+        .contactForm{
+            display:inline-block;
+            height:270px;
+            vertical-align: top;
+            padding-top: 20px;
+            margin-left:100px;
+        }
+           .contactForm input{
+            width: 202px;
+            height:26px;
+            margin:2px;
+            margin-top:0px;
+        }
+             .contactForm textarea{
+            width: 410px;
+            height:80px;
+            margin-left: 7px;
+        }
+        .contactForm button{
+            width:80px;
+            height: 30px;
+            background-color: #fa961a;
+           color: #F8F8FF;
+           border:none;
+           margin-left:337px;
+        }
+        .contactForm button:hover{
+            border:2px solid #F8F8FF;
+        }
+        .contactForm h4{
+            color:#a6a6a8;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+

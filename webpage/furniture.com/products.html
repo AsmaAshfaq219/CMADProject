@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/stylefooter.css" type="text/css" rel="stylesheet" />
+    <link href="css/stylenavbar.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Products</title>
+    <style>
+        body {
+            font-family: Tahoma, Helvetica, Arial, sans-serif;
+            margin: 0;
+            color: #a6a6a8;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fa961a;
+        }
+
+        button:focus {
+            outline: none;
+            border: none;
+        }
+
+        .slider {
+            width: 100%;
+            height: 350px;
+            /*background-image: url("images/im14cc.jpg");*/
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top: 50px;
+            transition: 0.6s ease;
+        }
+
+        .swapButton {
+            background-color: transparent;
+            color: #a6a6a8;
+            border: none;
+            /*margin-top:130px;*/
+            margin: 135px 10px;
+            transition: 0.6s ease;
+        }
+
+        .swapButton:hover {
+            background-color: #fa961a;
+            color: rgba(0, 0, 0, .8);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .swapButton:focus {
+            outline: none;
+        }
+
+        #swapleft {
+            float: left;
+        }
+
+        #swapRight {
+            float: right;
+        }
+
+        .inCircles {
+            border-radius: 100%;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #D2B48C;
+            display: inline-block;
+            margin: 0px 2px;
+        }
+
+        .inCircles:hover {
+            cursor: pointer;
+        }
+
+        #fillCircle {
+            background-color: #fa961a;
+        }
+
+        #unfillCircle {
+            background-color: transparent;
+        }
+
+        #sliderDiv {
+            width: max-content;
+            margin: 0px auto 0px auto;
+        }
+
+        .pbody {
+            margin: 50px auto 50px auto;
+        }
+
+        .tpbody {
+            width: 100%;
+            padding: 0px;
+            height: 900px;
+            margin: 0px;
+        }
+
+        .tpbody td {
+            margin: 0px;
+            border-spacing: 0px;
+            border-collapse: collapse;
+        }
+
+        .options {
+            width: 20%;
+            padding: 0px;
+            vertical-align: top;
+        }
+
+        .options ul {
+            list-style-type: none;
+            font-size: 18px;
+            color: rgba(0, 0, 0, .8);
+            line-height: 56px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            width: 200px;
+            margin-top: 0px;
+        }
+
+        .options ul li {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        }
+
+        .options ul li:hover {
+            color: #fa961a;
+        }
+
+        .options ul li:last-child {
+            border-bottom: none;
+        }
+
+        .items {
+            width: 100%;
+        }
+
+        .pitems div:hover {
+            background-color: rgba(40, 38, 34, 0.85);
+        }
+
+        .pitems {
+            padding-left: 50px;
+            padding-right: 50px;
+            border-spacing: 15px 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .viewButton {
+            display: none;
+            border: none;
+        }
+
+        .viewButtonA {
+            transition: 0.9s ease;
+            display: block;
+            width: 80px;
+            height: 30px;
+            background-color: #2c2e34;
+            position: absolute;
+            top: 175px;
+            color: #fa961a;
+            border-radius: 2px;
+            cursor: pointer;
+            border-color: #D2B48C;
+        }
+
+        .pitemHover {
+            background-color: #2c2e34;
+            width: 302px;
+            height: 352px;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .pitemDiv {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            position: relative;
+            width: 300px;
+            height: 350px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+        }
+
+        .pitemDiv img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .pitemDivH img {
+            width: 95%;
+            height: 95%;
+            margin-top: 9px;
+            opacity: 0.75;
+        }
+
+        .pitems a {
+            text-align: center;
+        }
+
+        .pitemsOptions {
+            position: absolute;
+            width: 300px;
+            height: 50px;
+            overflow: hidden;
+            background-color: rgba(52, 55, 60, 0.75);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            top: 300px;
+            left: 0px;
+        }
+
+        .buy {
+            background-color: transparent;
+            color: #fa961a;
+            /*border: 2px solid #fa961a;*/
+            border: none;
+            cursor: pointer;
+            padding: 0px;
+            /*width: 50px;*/
+        }
+
+        .buy :hover {
+            color: #a6a6a8;
+        }
+
+        .itemInfo {
+            color: #fa961a;
+            font-weight: normal;
+            position: absolute;
+            top: 300px;
+            width: 300px;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(52, 55, 60, 0.85);
+        }
+
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .popupBox {
+            visibility: hidden;
+            width: 140px;
+            background-color: #2c2e34;
+            color:#fa961a;
+            text-align: center;
+            border-radius: 5px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -80px;
+            font-weight: 500;
+        }
+
+        .popupBox:after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #fa961a transparent transparent transparent;
+        }
+
+         .showPopup {
+            visibility: visible;
+        }
+        .itemInfo h5 {
+            text-transform: capitalize;
+        }
+        /*HOVERABLE COLOR LIST*/
+        /*#hovercolor{
+            display:none;
+            font-size:90%; 
+        }
+        #hovercolor li a{
+            color: #2c2e34;
+            text-decoration: none;
+             padding:10px 10px 10px 10px;
+             width:100%;
+             height:100%;
+        }
+           #hovercolor li{
+            padding:0px 10px 0px 10px;
+            
+        }
+      
+        #hovercolor li a:hover{
+        color:#fa961a;
+        }
+        #color:hover #hovercolor{
+            display:block;
+    
+        }*/
+        /*HOVERABLE COLOR CHOOSER*/
+
+        #hovercolor li {
+            width: 13px;
+            height: 13px;
+            border: 2px solid #5a5854;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            display: inline-block;
+        }
+
+        #hovercolor li:hover {
+            border: 3px solid #5a5854;
+        }
+
+        #hovercolor #CountryYellow {
+            background-color: #cccc00;
+        }
+
+        #hovercolor #CountryBrown {
+            background-color: #80471c;
+        }
+
+        #hovercolor #DarkBrown {
+            background-color: #231709;
+        }
+
+        #hovercolor #White {
+            background-color: #f5fffa;
+        }
+
+        #hovercolor #CountryTan {
+            background-color: #D2B48C;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table id="navbar">
+            <tr>
+                <td>
+                    <h3 class="logo">Furniture</h3>
+                </td>
+                <td>
+                    <div class="nav">
+                        <ul id="hoverable">
+                            <li><a href="../index.html">home</a></li>
+                            <li><a href="#bedding">bedding</a></li>
+                            <li><a href="#dinning">dinning </a></li>
+                            <li><a href="#outdoor">outdoor</a></li>
+                            <li><a href="#kitchen">kitchen</a></li>
+                            <li><a href="#home care">home care</a></li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <form><input id="search" type="search" name="search" placeholder="search item" />
+                    </form>
+                </td>
+                <td><a href="cart.html"><i class="fa fa-th-list" aria-hidden="true"></i> Shopping List</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="slider" id="sliderSwap">
+
+        <button class="swapButton" id="swapLeft" onClick="changeSlider(id);"><i class="fa fa-angle-left fa-4x" aria-hidden="true"></i></button>
+        <button class="swapButton" id="swapRight" onClick="changeSlider(id);"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></button>
+        <div id="sliderDiv"></div>
+    </div>
+    <div class="pbody">
+        <table class="tpbody">
+            <tr>
+                <td class="options">
+                    <div>
+                        <ul>
+                            <li>Pieces</li>
+                            <li>Product</li>
+                            <li id="color">Color
+                                <ul id="hovercolor">
+                                    <!-- Color chooser-->
+                                    <li id="CountryYellow"></li>
+                                    <li id="CountryBrown"></li>
+                                    <li id="DarkBrown"></li>
+                                    <li id="White"></li>
+                                    <li id="CountryTan"></li>
+
+                                    <!--hoverable color list-->
+                                    <!--<li><a href="">Country Yellow</a></li>
+                                    <li><a href="">Country Brown</a></li>
+                                    <li><a href="">Mustard</a></li>
+                                    <li><a href="">White</a></li>
+                                    <li><a href="">Country Tan</a></li>-->
+                                </ul>
+                            </li>
+                            <li>Design</li>
+                            <li>New</li>
+                            <li>Sale item</li>
+                        </ul>
+                    </div>
+                </td>
+                <td class="items">
+                    <div class="pitems" id="pitemsId">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+        <div class="subFooterAbout">
+            <h3>About Company</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo<br/> Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit. Aenean commod</p>
+        </div>
+        <div class="subFooterQuick">
+            <h3>Quick Nav</h3>
+            <ul>
+                <li><a href="../index.html#home">home</a> </li>
+                <li><a href="../index.html#aboutus">about us</a> </li>
+                <li><a href="../index.html#ourwork">our work</a> </li>
+                <li id="product"><a href="products.html">furniture</a> </li>
+                <li><a href="../index.html#service">services</a> </li>
+                <li><a href=".//index.html#contactus">contact us</a> </li>
+            </ul>
+        </div>
+        <div class="subFooterProd">
+            <h3>Products</h3>
+            <ul>
+                <li><a href="">bedding</a></li>
+                <li><a href="">dinning </a></li>
+                <li><a href="">outdoor</a></li>
+                <li><a href="">kitchen</a></li>
+                <li><a href="">home care</a></li>
+            </ul>
+        </div>
+        <div class="navlogo">
+            <h1>FURNITURE</h1>
+        </div>
+    </div>
+    <script src="js/Slider.js"></script>
+    <script src="js/Items.js"></script>
+    <script src="js/BasicFunction.js"></script>
+    <script src="js/AddtoCart.js"></script>
+</body>
+
+</html>

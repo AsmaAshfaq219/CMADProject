@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Item</title>
+    <link href="css/stylefooter.css" type="text/css" rel="stylesheet" />
+    <link href="css/stylenavbar.css" type="text/css" rel="stylesheet" />
+    <link href="css/productItem.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Tahoma, Helvetica, Arial, sans-serif;
+            margin: 0px;
+            color: #a6a6a8;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #fa961a;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table id="navbar">
+            <tr>
+                <td>
+                    <h3 class="logo">Furniture</h3>
+                </td>
+                <td>
+                    <div class="nav">
+                        <ul id="hoverable">
+                            <li><a href="../index.html">home</a></li>
+                            <li><a href="products.html">bedding</a></li>
+                            <li><a href="products.html">dinning </a></li>
+                            <li><a href="products.html">outdoor</a></li>
+                            <li><a href="products.html">kitchen</a></li>
+                            <li><a href="products.html">home care</a></li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <form><input id="search" type="search" name="search" placeholder="search item" />
+                    </form>
+                </td>
+                <td><a href="cart.html"><i class="fa fa-th-list" aria-hidden="true"></i> Shopping List</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="productItemBody">
+        <h2>
+            Furniture Piece
+        </h2>
+        <hr/>
+    <div class="miniPicture">
+        <table class="miniTable" id="miniTable">
+        </table>
+    </div>
+    <div class="bigPicture" id="bigPicture"> </div>
+    <div class="itemDetails">
+        <h3 id="prodName"></h3>
+        <p id="prodPrice"></p>
+        <hr/>
+        <h5>Discription:</h5>
+        <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>consectetuer adipiscing elit</li>
+            <li>Aenean commodo ligula eget dolor</li>
+            <li>Aenean massa</li>
+        </ul>
+        <h5>Colors:</h5>
+        <ul id="colorsAvail"> </ul>
+       <div id="addtoList"></div>
+    </div>
+    </div>
+    <div class="footer">
+        <div class="subFooterAbout">
+            <h3>About Company</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo<br/> Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit. Aenean commod</p>
+        </div>
+        <div class="subFooterQuick">
+            <h3>Quick Nav</h3>
+            <ul>
+                <li><a href="../index.html#home">home</a> </li>
+                <li><a href="../index.html#aboutus">about us</a> </li>
+                <li><a href="../index.html#ourwork">our work</a> </li>
+                <li id="product"><a href="products.html">furniture</a> </li>
+                <li><a href="../index.html#service">services</a> </li>
+                <li><a href="../index.html#contactus">contact us</a> </li>
+            </ul>
+        </div>
+
+        <div class="subFooterProd">
+            <h3>Products</h3>
+            <ul>
+                <li><a href="products.html">bedding</a></li>
+                <li><a href="products.html">dinning </a></li>
+                <li><a href="products.html">outdoor</a></li>
+                <li><a href="products.html">kitchen</a></li>
+                <li><a href="products.html">home care</a></li>
+            </ul>
+        </div>
+        <div class="navlogo">
+            <h1>FURNITURE</h1>
+        </div>
+    </div>
+</body>
+<script src="js/Items.js"></Script>
+<script src="js/Productitem.js"></Script>
+<script src="js/AddtoCart.js"></script>
+</html>

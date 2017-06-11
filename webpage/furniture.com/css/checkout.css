@@ -1,0 +1,130 @@
+.checkOutBody{
+            display: block;
+             padding-top: 100px;
+             width:94%;
+             color:  #34373c;
+             font-size:14px;
+             margin: 0px auto 0px auto;
+}
+.checkOutBody h2{
+    font-weight:600;
+}
+.checkOutBody hr{
+    height: 1.5px;
+    background-color: #34373c;
+}
+.nameAddress, .parentField{
+    width:400px;
+    display:inline-block;
+}
+.innerFields{
+    padding: 5px 5px 5px 10px;
+    border: solid 1px #a6a6a8;
+}
+.required{
+    color: darkred;
+}
+.innerFields .fieldTable{
+width: 380px;
+color: #34373c;
+}
+
+.longField input, #country{
+    width: 366px;
+}
+#month, #date, #year{
+    width:40px;
+}
+#gender{
+    width: 180px;
+}
+input{
+    width: 176px;
+}
+.checkboxMar input{
+width: 15px;
+margin-top:2px;
+margin-bottom: 10px;
+}
+.fieldTable {
+    border-spacing: 0px 10px;
+    margin-bottom: 4px;
+}
+h4{
+    font-weight:600px;
+    margin-bottom:10px;
+}
+.parentField, .orderDetail{
+    vertical-align: top;
+    margin-left:10px;
+}
+.paymentMethod input,.shipMethod input{
+width: 15px;
+vertical-align: top;
+margin-right:5px;
+}
+#para{
+    width:350px; 
+    display: inline-block;
+}
+.forBorder{
+    border-bottom: dotted 2px #a6a6a8;
+    padding-bottom: 10px;
+}
+.commentBox{
+    width:388px;
+    height: 90px;
+}
+.commentBox textarea{
+   padding:5px 5px 5px 5px;
+}
+.orderDetail{
+    width:440px;
+    display:inline-block;
+}
+.fieldTable2 img{
+width: 88px;
+height: 103px;
+margin:0px;
+}
+.fieldTable2{
+    empty-cells: show;
+    width:420px;
+    font-size:13px;
+    border-spacing: 0px 10px;
+}
+.fieldTable2 td,.fieldTable2 th{
+    text-align: left;
+
+}
+.fieldTable2 th{
+    font-weight: 600;
+}
+.prodImage{
+    padding: 5px 0px 5px 0px;
+    width:110px;
+}
+.fieldTable2 .aligning{
+    text-align: right;
+    padding-right:20px;
+
+}
+tfoot:last-child{
+    font-weight: 600;
+}
+.fieldTable2 td{
+    border-top: solid 1px #a6a6a8;
+    padding-top:8px;
+    vertical-align: top;
+}
+.placeOrder{
+        font-size:15px;
+            padding:5px 8px 5px 8px;
+            background-color: #fa961a;
+           color: #F8F8FF;
+           border:none;
+           margin-top:18px;
+           float: right;
+           cursor:pointer;
+           width: 110px;
+}
